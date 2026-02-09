@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SportZone - Контакты</title>
+    <link rel="stylesheet" href="styles/global.css">
+    <link rel="stylesheet" href="styles/contacts.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body class="page">
+    <button class="burger-btn" id="burgerBtn" aria-label="Открыть меню">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+    <header class="header">
+      <!-- Логотип -->
+      <div class="sidebar-logo">
+        <h2>SportZone</h2>
+        <p>на спорт</p>
+      </div>
+
+      <nav class="menu" id="mainMenu">
+        <ul class="menu-list main-menu">
+          <!-- Содержимое меню без изменений -->
+          <li class="menu-items">
+            <a href="index.html"
+              ><img
+                class="menu-item-img"
+                src="./img/icons/home.png"
+                alt="Главная"
+            /></a>
+          </li>
+          <li class="menu-items">
+            <a href="catalog.html" class="active"
+              ><img
+                class="menu-item-img"
+                src="./img/icons/catalog.png"
+                alt="Каталог"
+            /></a>
+          </li>
+          <li class="menu-items">
+            <a href="favourites.html"
+              ><img
+                class="menu-item-img"
+                src="./img/icons/heart.png"
+                alt="Избранное"
+            /></a>
+          </li>
+          <li class="menu-items">
+            <a href="shopping-cart.html"
+              ><img
+                class="menu-item-img"
+                src="./img/icons/shopping-cart.png"
+                alt="Корзина"
+            /></a>
+          </li>
+          <li class="menu-items">
+            <a href="delivery.html"
+              ><img
+                class="menu-item-img"
+                src="./img/icons/delivery.png"
+                alt="Доставка"
+            /></a>
+          </li>
+          <li class="menu-items">
+            <a href="contacts.html"
+              ><img
+                class="menu-item-img"
+                src="./img/icons/contacts.png"
+                alt="Контакты"
+            /></a>
+          </li>
+          <li class="menu-items">
+            <a href="about.html" class="active"
+              ><img
+                class="menu-item-img"
+                src="./img/icons/about.png"
+                alt="О нас"
+            /></a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- Обертка для основного контента и футера -->
+    <div class="main-wrapper">
+        <!-- Основное содержание -->
+        <main class="main">
+            <section class="categories-section">
+                <h1 class="section-title">Контакты</h1>
+                <p class="section-subtitle">Свяжитесь с нами любым удобным способом</p>
+
+                <!-- Контакты -->
+                <section class="contacts-section" id="contacts-section">
+                    <div class="benefits-grid">
+                        <div class="benefit-card">
+                            <div class="benefit-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <h3>Адрес</h3>
+                            <p>Москва, ул. Спортивная, 10<br>Ежедневно 9:00-21:00</p>
+                        </div>
+                        
+                        <div class="benefit-card">
+                            <div class="benefit-icon">
+                                <i class="fas fa-phone"></i>
+                            </div>
+                            <h3>Телефон</h3>
+                            <p>+7 (495) 765-43-21<br>Звонки принимаем с 9:00 до 21:00</p>
+                        </div>
+
+                        <div class="benefit-card">
+                            <div class="benefit-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <h3>Email</h3>
+                            <p>support@sportzone.ru<br>Отвечаем в течение 24 часов</p>
+                        </div>
+
+                        <div class="benefit-card">
+                            <div class="benefit-icon">
+                                <i class="fas fa-headset"></i>
+                            </div>
+                            <h3>Поддержка</h3>
+                            <p>Онлайн-чат на сайте<br>Консультации по товарам и заказам</p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Карта и форма обратной связи -->
+                <section class="contact-details">
+                    <div class="contact-container">
+                        <div class="map-section">
+                            <h3>Мы на карте</h3>
+                            <div class="map-placeholder">
+                                <a href="https://yandex.ru/maps/?um=constructor%3Aa4b0d7e6654b46bfdff5dfd91bd8b5be6007f61162d8e4f277702cc724c1a674&amp;source=constructorStatic" target="_blank"><img src="https://api-maps.yandex.ru/services/constructor/1.0/static/?um=constructor%3Aa4b0d7e6654b46bfdff5dfd91bd8b5be6007f61162d8e4f277702cc724c1a674&amp;width=600&amp;height=450&amp;lang=ru_RU" alt="" style="border: 0;" /></a>
+
+                                <!-- <div class="map-image">
+                                    <i class="fas fa-map-marked-alt"></i>
+                                    <p>Москва, ул. Спортивная, 10</p>
+                                </div>
+                                <p class="map-note">Ближайшая станция метро: "Спортивная"</p> -->
+                            </div>
+                        </div>
+                        
+                        <div class="form-section">
+                            <h3>Обратная связь</h3>
+                            <form class="contact-form">
+                                <div class="form-group">
+                                    <label for="name">Имя</label>
+                                    <input type="text" id="name" placeholder="Ваше имя" required>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="email">Email</label>
+                                    <input type="email" id="email" placeholder="Ваш email" required>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="phone">Телефон</label>
+                                    <input type="tel" id="phone" placeholder="+7 (___) ___-__-__">
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="message">Сообщение</label>
+                                    <textarea id="message" placeholder="Ваш вопрос или сообщение..." rows="4"></textarea>
+                                </div>
+                                
+                                <button type="submit" class="submit-btn">Отправить сообщение</button>
+                            </form>
+                        </div>
+                    </div>
+                </section>
+            </section>
+        </main>
+
+        <!-- Футер -->
+        <footer class="footer" id="footer">
+            <div class="container">
+                <div class="footer-grid">
+                    <div class="footer-col">
+                        <h3>SportZone</h3>
+                        <p>Экипировка для спорта и активного отдыха.<br>Ваши победы начинаются здесь.</p>
+                        <div class="social-links">
+                            <a href="#" class="social-icon"><i class="fab fa-vk"></i></a>
+                            <a href="#" class="social-icon"><i class="fab fa-telegram"></i></a>
+                            <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                            <a href="#" class="social-icon"><i class="fab fa-youtube"></i></a>
+                        </div>
+                    </div>
+                    
+                    <div class="footer-col">
+                        <h3>Меню</h3>
+                        <a href="index.html#home" class="footer-link">Главная</a>
+                        <a href="catalog.html#catalog-section" class="footer-link">Каталог</a>
+                        <a href="delivery.html#delivery-section" class="footer-link">Доставка</a>
+                        <a href="#contacts-section" class="footer-link">Контакты</a>
+                        <a href="about.html#about-section" class="footer-link">О нас</a>
+                        
+                    </div>
+                    
+                    <div class="footer-col">
+                        <h3>Информация</h3>
+                        <a href="delivery.html#returns" class="footer-link">Возврат товара</a>
+                        <a href="delivery.html#payment" class="footer-link">Способы оплаты</a>
+                    </div>
+                    
+                    <div class="footer-col">
+                        <h3>Контакты</h3>
+                        <p class="contact-info"><i class="fas fa-map-marker-alt"></i> Москва, ул. Спортивная, 10</p>
+                        <p class="contact-info"><i class="fas fa-phone"></i> +7 (495) 765-43-21</p>
+                        <p class="contact-info"><i class="fas fa-envelope"></i> support@sportzone.ru</p>
+                        <p class="contact-info"><i class="fas fa-clock"></i> Пн-Вс 9:00-21:00</p>
+                    </div>
+                </div>
+                
+                <div class="footer-bottom">
+                    <p>&copy; 2023 SportZone. Все права защищены.</p>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script>
+        // Плавная прокрутка
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 100,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // Обработка формы
+        document.querySelector('.contact-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Спасибо! Ваше сообщение отправлено. Мы свяжемся с вами в ближайшее время.');
+            this.reset();
+        });
+    </script>
+    
+    <script src="./scripts/script.js"></script>
+</body>
+</html>

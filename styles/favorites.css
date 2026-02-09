@@ -1,0 +1,302 @@
+.favorites-count-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 16px;
+    background-color: rgba(154, 255, 114, 0.1);
+    border-radius: 20px;
+    font-family: "Inter", sans-serif;
+    font-size: 14px;
+    color: #9aff72;
+    font-weight: 500;
+    align-self: flex-start;
+    margin-bottom: 15px;
+}
+
+.favorites-count-badge i {
+    color: #ff4757;
+}
+
+/* Базовые стили для кнопок (если их еще нет) */
+.btn {
+    padding: 12px 24px;
+    border-radius: 10px;
+    font-family: "Inter", sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    border: none;
+}
+
+.btn i {
+    font-size: 14px;
+}
+
+/* Сообщение о пустом избранном */
+#favorites-empty-message {
+    grid-column: 1 / -1;
+    text-align: center;
+    padding: 60px 20px;
+    background-color: rgba(46, 46, 46, 0.8);
+    border-radius: 15px;
+    border: 2px dashed rgba(154, 255, 114, 0.3);
+    margin: 20px 0;
+}
+
+#favorites-empty-message i {
+    font-size: 4rem;
+    color: #3a0404;
+    margin-bottom: 20px;
+    opacity: 0.9;
+}
+
+#favorites-empty-message h3 {
+    font-family: "Inter", sans-serif;
+    color: #ffffff;
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+#favorites-empty-message p {
+    font-family: "Inter", sans-serif;
+    color: #acb3aa;
+    font-size: 1rem;
+    margin-bottom: 30px;
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Специфичные стили для карточек на странице избранного */
+#products-container .product-card {
+    position: relative;
+}
+
+#products-container .product-card .product-actions {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+#products-container .product-card .product-actions .add-to-cart {
+    flex: 1;
+    padding: 12px 16px;
+    font-size: 14px;
+}
+
+#products-container .product-card .product-actions .fav-btn {
+    width: 40px;
+    height: 40px;
+    font-size: 18px;
+}
+
+#products-container .product-card .product-actions .btn-remove {
+    width: 40px;
+    height: 40px;
+    font-size: 16px;
+}
+
+
+/* Карточки товаров */
+.products-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 30px;
+    margin-bottom: 50px;
+}
+
+.product-card {
+    background-color: rgba(46, 46, 46, 0.9);
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    border: 2px solid transparent;
+}
+
+.product-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+    border-color: #9aff72;
+}
+
+/* Верхняя часть - картинка/иконка продукта */
+.product-image {
+    height: 200px;
+    background: linear-gradient(135deg,
+            rgba(84, 84, 84, 0.9),
+            rgba(186, 186, 186, 0.9));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* padding: 20px; */
+    position: relative;
+    overflow: hidden;
+}
+
+.product-image i {
+    font-size: 5rem;
+    color: #9aff72;
+    z-index: 2;
+    transition: transform 0.3s ease;
+}
+
+.product-card:hover .product-image i {
+    transform: scale(1.1);
+}
+
+/* Бейдж для скидок/акций */
+.product-badge {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    background-color: #ff4757;
+    color: white;
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    z-index: 3;
+    font-family: "Inter", sans-serif;
+}
+
+.product-badge.sale {
+    background-color: #ff4757;
+}
+
+.product-badge.new {
+    background-color: #1e90ff;
+}
+
+.product-badge.hit {
+    background-color: #ffa502;
+}
+
+/* Нижняя часть - информация о продукте */
+.product-info {
+    padding: 25px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.product-category {
+    display: inline-block;
+    background-color: rgba(154, 255, 114, 0.2);
+    color: #9aff72;
+    font-size: 0.8rem;
+    padding: 5px 12px;
+    border-radius: 20px;
+    margin-bottom: 12px;
+    font-weight: 600;
+    font-family: "Inter", sans-serif;
+    align-self: flex-start;
+}
+
+.product-brand {
+    display: inline-block;
+    color: #acb3aa;
+    font-size: 0.85rem;
+    font-weight: 500;
+    margin-bottom: 8px;
+    font-family: "Inter", sans-serif;
+}
+
+.product-title {
+    font-family: "Inter", sans-serif;
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 10px;
+    color: #ffffff;
+    line-height: 1.4;
+    min-height: 3.2rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: block;
+    max-height: calc(1.4em * 2);
+}
+
+.product-details {
+    color: #acb3aa;
+    font-size: 0.9rem;
+    margin-bottom: 15px;
+    line-height: 1.4;
+    flex-grow: 1;
+    min-height: 2.8rem;
+    font-family: "Inter", sans-serif;
+}
+
+/* Рейтинг товара */
+.product-rating {
+    display: flex;
+    /* align-items: center; */
+    margin-bottom: 15px;
+    gap: 8px;
+}
+
+.rating-stars {
+    color: #ffa502;
+    font-size: 1rem;
+}
+
+.rating-count {
+    color: #acb3aa;
+    font-size: 0.85rem;
+    font-family: "Inter", sans-serif;
+}
+
+.product-price-section {
+    margin-top: auto;
+    padding-top: 20px;
+    border-top: 1px solid rgba(154, 255, 114, 0.2);
+    display: flex;
+    flex-direction: column;
+}
+
+.product-price {
+    font-family: "Inter", sans-serif;
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #9aff72;
+    margin-bottom: 20px;
+}
+
+.product-actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+}
+
+/* Стили для кнопки "В корзину" */
+.btn.btn-primary.add-to-cart {
+    flex-grow: 1;
+    padding: 14px 20px;
+    font-size: 1rem;
+    background-color: #9aff72;
+    color: #2e2e2e;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: 600;
+    text-align: center;
+    white-space: nowrap;
+    font-family: "Inter", sans-serif;
+}
+
+.btn.btn-primary.add-to-cart:hover {
+    background-color: #d0ffbd;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(154, 255, 114, 0.3);
+}

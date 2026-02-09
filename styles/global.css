@@ -1,0 +1,259 @@
+styles/global.css :root {
+  --primary-color: #4299e1;
+  --primary-dark: #3182ce;
+  --secondary-color: #38a169;
+  --text-dark: #2d3748;
+  --text-medium: #4a5568;
+  --text-light: #718096;
+  --background-light: #f7fafc;
+  --background-medium: #edf2f7;
+  --white: #ffffff;
+  --shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+  --shadow-hover: 0 15px 30px rgba(0, 0, 0, 0.15);
+}
+
+/* Анимации */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in {
+  animation: fadeIn 0.5s ease-out;
+}
+
+/* Утилиты */
+.text-center {
+  text-align: center;
+}
+
+.mt-20 {
+  margin-top: 20px;
+}
+
+.mb-20 {
+  margin-bottom: 20px;
+}
+
+.mb-40 {
+  margin-bottom: 40px;
+}
+
+.p-20 {
+  padding: 20px;
+}
+
+.hidden {
+  display: none;
+}
+
+/* Карточки */
+.card {
+  background: var(--white);
+  border-radius: 15px;
+  padding: 25px;
+  box-shadow: var(--shadow);
+  transition: all 0.3s ease;
+}
+
+.card:hover {
+  box-shadow: var(--shadow-hover);
+  transform: translateY(-5px);
+}
+
+/* Кнопки */
+.btn-primary {
+  background: linear-gradient(
+    135deg,
+    var(--primary-color) 0%,
+    var(--primary-dark) 100%
+  );
+  color: var(--white);
+}
+
+.btn-secondary {
+  background: transparent;
+  color: var(--primary-color);
+  border: 2px solid var(--primary-color);
+}
+
+.btn-secondary:hover {
+  background: var(--primary-color);
+  color: var(--white);
+}
+
+/* Формы */
+.input-group {
+  margin-bottom: 20px;
+}
+
+.input-group label {
+  display: block;
+  margin-bottom: 5px;
+  color: var(--text-dark);
+  font-weight: 600;
+}
+
+.input-group input,
+.input-group select,
+.input-group textarea {
+  width: 100%;
+  padding: 12px 15px;
+  border: 2px solid #e2e8f0;
+  border-radius: 8px;
+  font-size: 16px;
+  transition: border-color 0.3s ease;
+}
+
+.input-group input:focus,
+.input-group select:focus,
+.input-group textarea:focus {
+  outline: none;
+  border-color: var(--primary-color);
+}
+
+.favorites-indicator,
+.cart-indicator {
+  position: absolute;
+  top: -5px;
+  right: -5px;
+  background: #ff4757;
+  color: white;
+  font-size: 12px;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+}
+
+.menu-list li {
+  position: relative;
+  aspect-ratio: 1/1;
+}
+
+body.page {
+  margin: 0;
+  background: var(--background-sidebar);
+  grid-template-columns: min(20%, 125px) 1fr;
+}
+
+header.header {
+  height: max-content;
+  overflow-y: auto;
+}
+
+ul.menu {
+  height: max-content;
+  overflow: auto;
+}
+
+/* Кнопка бургер-меню */
+.burger-btn {
+  display: none;
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  width: 40px;
+  height: 40px;
+  background-color: var(--primary-color);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  z-index: 1001;
+  padding: 8px;
+}
+
+.burger-btn span {
+  display: block;
+  width: 24px;
+  height: 2px;
+  background-color: white;
+  transition: all 0.3s ease;
+}
+
+/* Медиа-запрос для мобильных устройств */
+@media (max-width: 760px) {
+  body.page {
+    grid-template-columns: auto;
+  }
+
+  .burger-btn {
+    display: flex;
+  }
+
+  .header {
+    width: 100%;
+    height: auto;
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 15px;
+    background-color: var(--background-sidebar);
+    display: none;
+  }
+
+  header.active {
+    display: block;
+  }
+
+  .menu {
+    position: fixed;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100vh;
+    background-color: var(--background-sidebar);
+    transition: left 0.3s ease;
+    padding-top: 80px;
+    z-index: 1000;
+  }
+
+  .menu.active {
+    left: 0;
+  }
+
+  .menu-list {
+    padding: 20px;
+  }
+
+  .sidebar-logo {
+    margin-bottom: 10px;
+  }
+
+  /* Анимация бургер-кнопки при открытии */
+  .burger-btn.active span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+  }
+
+  .burger-btn.active span:nth-child(2) {
+    opacity: 0;
+  }
+
+  .burger-btn.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(7px, -6px);
+  }
+
+  nav.menu {
+    height: max-content;
+    overflow: auto;
+  }
+  
+  
+}
+
+ul.menu-list {
+  block-size: 100vh;
+}

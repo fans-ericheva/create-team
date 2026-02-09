@@ -1,0 +1,243 @@
+<!doctype html>
+<html lang="ru">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>SportZone - Маркетплейс спортивных товаров</title>
+	<link rel="stylesheet" href="styles/global.css" />
+	<link rel="stylesheet" href="styles/main.css" />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+</head>
+
+<body class="page">
+	<button class="burger-btn" id="burgerBtn" aria-label="Открыть меню">
+		<span></span>
+		<span></span>
+		<span></span>
+	</button>
+	<header class="header">
+		<!-- Логотип -->
+		<div class="sidebar-logo">
+			<h2>SportZone</h2>
+			<p>на спорт</p>
+		</div>
+
+		<nav class="menu" id="mainMenu">
+			<ul class="menu-list main-menu">
+				<!-- Содержимое меню без изменений -->
+				<li class="menu-items">
+					<a href="index.html"><img class="menu-item-img" src="./img/icons/home.png" alt="Главная" /></a>
+				</li>
+				<li class="menu-items">
+					<a href="catalog.html" class="active"><img class="menu-item-img" src="./img/icons/catalog.png"
+							alt="Каталог" /></a>
+				</li>
+				<li class="menu-items">
+					<a href="favourites.html"><img class="menu-item-img" src="./img/icons/heart.png"
+							alt="Избранное" /></a>
+				</li>
+				<li class="menu-items">
+					<a href="shopping-cart.html"><img class="menu-item-img" src="./img/icons/shopping-cart.png"
+							alt="Корзина" /></a>
+				</li>
+				<li class="menu-items">
+					<a href="delivery.html"><img class="menu-item-img" src="./img/icons/delivery.png"
+							alt="Доставка" /></a>
+				</li>
+				<li class="menu-items">
+					<a href="contacts.html"><img class="menu-item-img" src="./img/icons/contacts.png"
+							alt="Контакты" /></a>
+				</li>
+				<li class="menu-items">
+					<a href="about.html" class="active"><img class="menu-item-img" src="./img/icons/about.png"
+							alt="О нас" /></a>
+				</li>
+			</ul>
+		</nav>
+	</header>
+
+	<!-- Обертка для основного контента и футера -->
+	<div class="main-wrapper">
+		<!-- Основное содержание -->
+		<main class="main">
+			<!-- Категории товаров -->
+			<section class="categories-section">
+				<h1 class="section-title">SportZone</h1>
+				<p class="section-subtitle">Маркетплейс спортивных товаров</p>
+				<h3 class="categories-title">Категории товаров</h3>
+
+				<ul class="categories">
+					<!-- Водный спорт -->
+					<li onclick="location.href = 'catalog.html?category=vodn-sport'">
+						<a href="catalog.html?category=vodn-sport">
+							<article class="category" id="vodn-sport">
+								<img src="./img/water.png" alt="Водный спорт" />
+								<p>Водный спорт</p>
+							</article>
+						</a>
+					</li>
+
+					<!-- Зимний спорт -->
+					<li>
+						<a href="catalog.html?category=zimni-sport">
+							<article class="category" id="zimni-sport">
+								<img src="./img/winter.png" alt="Зимний спорт" />
+								<p>Зимний спорт</p>
+							</article>
+						</a>
+					</li>
+
+					<!-- Фитнес и йога -->
+					<li>
+						<a href="catalog.html?category=fitness-yoga">
+							<article class="category" id="fitness-yoga">
+								<img src="./img/yoga.png" alt="Фитнес и йога" />
+								<p>Фитнес и йога</p>
+							</article>
+						</a>
+					</li>
+
+					<!-- Туризм -->
+					<li>
+						<a href="catalog.html?category=tourism">
+							<article class="category" id="tourism">
+								<img src="./img/tourism.png" alt="Туризм" />
+								<p>Туризм</p>
+							</article>
+						</a>
+					</li>
+				</ul>
+				<button class="">
+					<a href="catalog.html"> посмотреть каталог </a>
+				</button>
+
+				<!-- Частые вопросы -->
+				<section class="faq-section" id="faq">
+					<h2 class="section-title">Частые вопросы</h2>
+					<div class="faq-container">
+						<div class="faq-block">
+							<div class="faq-icon">
+								<i class="fas fa-question-circle"></i>
+							</div>
+							<div class="faq-content">
+								<h3>Как оформить заказ?</h3>
+								<p>Выберите товар, добавьте его в корзину, перейдите к оформлению и заполните контактные данные.</p>
+							</div>
+						</div>
+
+						<div class="faq-block">
+							<div class="faq-icon">
+								<i class="fas fa-users"></i>
+							</div>
+							<div class="faq-content">
+								<h3>Есть ли скидки для оптовых покупателей?</h3>
+								<p>Да, для оптовых заказов от 10 единиц товара предоставляются специальные условия.</p>
+							</div>
+						</div>
+
+						<div class="faq-block">
+							<div class="faq-icon">
+								<i class="fas fa-map-marker-alt"></i>
+							</div>
+							<div class="faq-content">
+								<h3>Можно ли изменить адрес доставки?</h3>
+								<p>Да, вы можете изменить адрес доставки до момента отправки заказа.</p>
+							</div>
+						</div>
+
+						<div class="faq-block">
+							<div class="faq-icon">
+								<i class="fas fa-comments"></i>
+							</div>
+							<div class="faq-content">
+								<h3>Есть ли консультация при выборе товара?</h3>
+								<p>Да, наши менеджеры помогут с выбором по телефону или в онлайн-чате.</p>
+							</div>
+						</div>
+
+						<div class="faq-block">
+							<div class="faq-icon">
+								<i class="fas fa-search"></i>
+							</div>
+							<div class="faq-content">
+								<h3>Не нашли нужный товар?</h3>
+								<p>Свяжитесь с нами — мы постараемся найти интересующий вас товар в ближайшее время.</p>
+							</div>
+						</div>
+
+						<div class="faq-block">
+							<div class="faq-icon">
+								<i class="fas fa-award"></i>
+							</div>
+							<div class="faq-content">
+								<h3>Товары оригинальные?</h3>
+								<p>Да, мы работаем только с официальными поставщиками и гарантируем подлинность всей продукции.</p>
+							</div>
+						</div>
+					</div>
+				</section>
+			</section>
+		</main>
+
+		<!-- Футер -->
+		<footer class="footer" id="footer">
+			<div class="container">
+				<div class="footer-grid">
+					<div class="footer-col">
+						<h3>SportZone</h3>
+						<p>Экипировка для спорта и активного отдыха.<br />Ваши победы начинаются здесь.
+						</p>
+						<div class="social-links">
+							<a href="#" class="social-icon"><i class="fab fa-vk"></i></a>
+							<a href="#" class="social-icon"><i class="fab fa-telegram"></i></a>
+							<a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+							<a href="#" class="social-icon"><i class="fab fa-youtube"></i></a>
+						</div>
+					</div>
+
+					<div class="footer-col">
+						<h3>Меню</h3>
+						<a href="#home" class="footer-link">Главная</a>
+						<a href="catalog.html#catalog-section" class="footer-link">Каталог</a>
+						<a href="delivery.html#delivery-section" class="footer-link">Доставка</a>
+						<a href="contacts.html#contacts-section" class="footer-link">Контакты</a>
+						<a href="about.html#about-section" class="footer-link">О нас</a>
+					</div>
+
+					<div class="footer-col">
+						<h3>Помощь</h3>
+						<a href="delivery.html#returns" class="footer-link">Возврат товара</a>
+						<a href="delivery.html#payment" class="footer-link">Способы оплаты</a>
+					</div>
+
+					<div class="footer-col">
+						<h3>Контакты</h3>
+						<p class="contact-info">
+							<i class="fas fa-map-marker-alt"></i> Москва, ул. Спортивная, 10
+						</p>
+						<p class="contact-info">
+							<i class="fas fa-phone"></i> +7 (495) 765-43-21
+						</p>
+						<p class="contact-info">
+							<i class="fas fa-envelope"></i> support@sportzone.ru
+						</p>
+						<p class="contact-info">
+							<i class="fas fa-clock"></i> Пн-Вс 9:00-21:00
+						</p>
+					</div>
+				</div>
+
+				<div class="footer-bottom">
+					<p>&copy; 2023 SportZone. Все права защищены.</p>
+				</div>
+			</div>
+		</footer>
+	</div>
+
+
+	<script src="./scripts/script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SportZone - Доставка и оплата</title>
+    <link rel="stylesheet" href="styles/global.css">
+    <link rel="stylesheet" href="styles/delivery.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body class="page">
+    <button class="burger-btn" id="burgerBtn" aria-label="Открыть меню">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+    <header class="header">
+      <!-- Логотип -->
+      <div class="sidebar-logo">
+        <h2>SportZone</h2>
+        <p>на спорт</p>
+      </div>
+
+      <nav class="menu" id="mainMenu">
+        <ul class="menu-list main-menu">
+          <!-- Содержимое меню без изменений -->
+          <li class="menu-items">
+            <a href="index.html"
+              ><img
+                class="menu-item-img"
+                src="./img/icons/home.png"
+                alt="Главная"
+            /></a>
+          </li>
+          <li class="menu-items">
+            <a href="catalog.html" class="active"
+              ><img
+                class="menu-item-img"
+                src="./img/icons/catalog.png"
+                alt="Каталог"
+            /></a>
+          </li>
+          <li class="menu-items">
+            <a href="favourites.html"
+              ><img
+                class="menu-item-img"
+                src="./img/icons/heart.png"
+                alt="Избранное"
+            /></a>
+          </li>
+          <li class="menu-items">
+            <a href="shopping-cart.html"
+              ><img
+                class="menu-item-img"
+                src="./img/icons/shopping-cart.png"
+                alt="Корзина"
+            /></a>
+          </li>
+          <li class="menu-items">
+            <a href="delivery.html"
+              ><img
+                class="menu-item-img"
+                src="./img/icons/delivery.png"
+                alt="Доставка"
+            /></a>
+          </li>
+          <li class="menu-items">
+            <a href="contacts.html"
+              ><img
+                class="menu-item-img"
+                src="./img/icons/contacts.png"
+                alt="Контакты"
+            /></a>
+          </li>
+          <li class="menu-items">
+            <a href="about.html" class="active"
+              ><img
+                class="menu-item-img"
+                src="./img/icons/about.png"
+                alt="О нас"
+            /></a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- Обертка для основного контента и футера -->
+    <div class="main-wrapper">
+        <!-- Основное содержание -->
+        <main class="main">
+            <section class="categories-section">
+                <h1 class="section-title">Доставка и оплата</h1>
+                <p class="section-subtitle">Условия доставки, возврата и способы оплаты</p>
+
+                <!-- Доставка -->
+                <section class="delivery-section" id="delivery-section">
+                    <h2 class="section-title">Доставка</h2>
+                    <div class="about-content">
+                        <div class="about-feature">
+                            <div class="feature-icon">
+                                <i class="fas fa-shipping-fast"></i>
+                            </div>
+                            <div class="feature-text">
+                                <h3>Быстрая доставка</h3>
+                                <p>Доставляем заказы по Москве за 1-2 дня, по России за 3-7 дней</p>
+                            </div>
+                        </div>
+                        
+                        <div class="about-feature">
+                            <div class="feature-icon">
+                                <i class="fas fa-box"></i>
+                            </div>
+                            <div class="feature-text">
+                                <h3>Бесплатная доставка</h3>
+                                <p>При заказе от 5000 рублей доставка по Москве бесплатно</p>
+                            </div>
+                        </div>
+                        
+                        <div class="about-feature">
+                            <div class="feature-icon">
+                                <i class="fas fa-store"></i>
+                            </div>
+                            <div class="feature-text">
+                                <h3>Самовывоз</h3>
+                                <p>Заберите заказ из нашего магазина по адресу: Москва, ул. Спортивная, 10</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                
+                <!-- Возврат товара -->
+                <section class="returns-section" id="returns">
+                    <h2 class="section-title">Возврат товара</h2>
+                    <div class="returns-grid">
+                        <div class="return-card">
+                            <div class="return-icon">
+                                <i class="fas fa-calendar-check"></i>
+                            </div>
+                            <h3>14 дней на возврат</h3>
+                            <p>Вы можете вернуть товар в течение 14 дней с момента покупки</p>
+                        </div>
+                        
+                        <div class="return-card">
+                            <div class="return-icon">
+                                <i class="fas fa-box-open"></i>
+                            </div>
+                            <h3>Условия возврата</h3>
+                            <p>Товар должен быть в оригинальной упаковке без следов использования</p>
+                        </div>
+                        
+                        <div class="return-card">
+                            <div class="return-icon">
+                                <i class="fas fa-exchange-alt"></i>
+                            </div>
+                            <h3>Обмен товара</h3>
+                            <p>Возможен обмен на аналогичный товар другого размера или цвета</p>
+                        </div>
+                        
+                        <div class="return-card">
+                            <div class="return-icon">
+                                <i class="fas fa-money-bill-wave"></i>
+                            </div>
+                            <h3>Возврат денег</h3>
+                            <p>Деньги возвращаются на карту в течение 3-10 рабочих дней</p>
+                        </div>
+                    </div>
+                    
+                    <div class="returns-instructions">
+                        <h3>Как вернуть товар:</h3>
+                        <ol class="instructions-list">
+                            <li>Напишите на почту returns@sportzone.ru или позвоните по телефону +7 (495) 765-43-21</li>
+                            <li>Сообщите номер заказа и причину возврата</li>
+                            <li>Упакуйте товар в оригинальную упаковку</li>
+                            <li>Дождитесь курьера или отправьте товар почтой</li>
+                        </ol>
+                    </div>
+                </section>
+
+                <!-- Оплата -->
+                <section class="payment-section" id="payment">
+                    <h2 class="section-title">Способы оплаты</h2>
+                    <div class="payment-grid">
+                        <div class="payment-card">
+                            <div class="payment-icon">
+                                <i class="fas fa-credit-card"></i>
+                            </div>
+                            <h3>Банковские карты</h3>
+                            <p>Visa, MasterCard, Мир - оплата онлайн при оформлении заказа</p>
+                            <ul class="payment-details">
+                                <li>Безопасная оплата через SSL</li>
+                                <li>Мгновенное подтверждение</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="payment-card">
+                            <div class="payment-icon">
+                                <i class="fas fa-money-bill-wave"></i>
+                            </div>
+                            <h3>Наличными</h3>
+                            <p>Оплата наличными при получении заказа или в магазине</p>
+                            <ul class="payment-details">
+                                <li>При получении у курьера</li>
+                                <li>В нашем магазине</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="payment-card">
+                            <div class="payment-icon">
+                                <i class="fas fa-mobile-alt"></i>
+                            </div>
+                            <h3>Онлайн платежи</h3>
+                            <p>СБП, ЮMoney и другие электронные платежные системы</p>
+                            <ul class="payment-details">
+                                <li>Быстро и удобно</li>
+                                <li>Без комиссии</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="payment-card">
+                            <div class="payment-icon">
+                                <i class="fas fa-university"></i>
+                            </div>
+                            <h3>Банковский перевод</h3>
+                            <p>Оплата по счету для юридических лиц и крупных заказов</p>
+                            <ul class="payment-details">
+                                <li>Для организаций</li>
+                                <li>Счет выставляется по запросу</li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+            </section>
+        </main>
+
+        <!-- Футер -->
+        <footer class="footer" id="footer">
+            <div class="container">
+                <div class="footer-grid">
+                    <div class="footer-col">
+                        <h3>SportZone</h3>
+                        <p>Экипировка для спорта и активного отдыха.<br>Ваши победы начинаются здесь.</p>
+                        <div class="social-links">
+                            <a href="#" class="social-icon"><i class="fab fa-vk"></i></a>
+                            <a href="#" class="social-icon"><i class="fab fa-telegram"></i></a>
+                            <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                            <a href="#" class="social-icon"><i class="fab fa-youtube"></i></a>
+                        </div>
+                    </div>
+                    
+                    <div class="footer-col">
+                        <h3>Меню</h3>
+                        <a href="index.html#home" class="footer-link">Главная</a>
+                        <a href="catalog.html#catalog-section" class="footer-link">Каталог</a>
+                        <a href="#delivery-section" class="footer-link">Доставка</a>
+                        <a href="contacts.html#contacts-section" class="footer-link">Контакты</a>
+                        <a href="about.html#about-section" class="footer-link">О нас</a>
+                    </div>
+                    
+                    <div class="footer-col">
+                        <h3>Информация</h3>
+                        <a href="delivery.html#returns" class="footer-link">Возврат товара</a>
+                        <a href="delivery.html#payment" class="footer-link">Способы оплаты</a>
+                    </div>
+                    
+                    <div class="footer-col">
+                        <h3>Контакты</h3>
+                        <p class="contact-info"><i class="fas fa-map-marker-alt"></i> Москва, ул. Спортивная, 10</p>
+                        <p class="contact-info"><i class="fas fa-phone"></i> +7 (495) 765-43-21</p>
+                        <p class="contact-info"><i class="fas fa-envelope"></i> support@sportzone.ru</p>
+                        <p class="contact-info"><i class="fas fa-clock"></i> Пн-Вс 9:00-21:00</p>
+                    </div>
+                </div>
+                
+                <div class="footer-bottom">
+                    <p>&copy; 2023 SportZone. Все права защищены.</p>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script>
+
+        // Плавная прокрутка
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 100,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    </script>
+    
+    <script src="./scripts/script.js"></script>
+</body>
+</html>

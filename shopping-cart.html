@@ -1,0 +1,190 @@
+<!doctype html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Корзина - SportZone</title>
+    <link rel="stylesheet" href="styles/global.css" />
+    <link rel="stylesheet" href="styles/catalog.css" />
+    <link rel="stylesheet" href="styles/shopping-cart.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+</head>
+
+<body class="page">
+    <button class="burger-btn" id="burgerBtn" aria-label="Открыть меню">
+        <span></span>
+        <span></span>
+        <span></span>
+    </button>
+    <header class="header">
+        <!-- Логотип -->
+        <div class="sidebar-logo">
+            <h2>SportZone</h2>
+            <p>на спорт</p>
+        </div>
+
+        <nav class="menu" id="mainMenu">
+            <ul class="menu-list main-menu">
+                <!-- Содержимое меню без изменений -->
+                <li class="menu-items">
+                    <a href="index.html"><img class="menu-item-img" src="./img/icons/home.png" alt="Главная" /></a>
+                </li>
+                <li class="menu-items">
+                    <a href="catalog.html" class="active"><img class="menu-item-img" src="./img/icons/catalog.png"
+                            alt="Каталог" /></a>
+                </li>
+                <li class="menu-items">
+                    <a href="favourites.html"><img class="menu-item-img" src="./img/icons/heart.png"
+                            alt="Избранное" /></a>
+                </li>
+                <li class="menu-items">
+                    <a href="shopping-cart.html"><img class="menu-item-img" src="./img/icons/shopping-cart.png"
+                            alt="Корзина" /></a>
+                </li>
+                <li class="menu-items">
+                    <a href="delivery.html"><img class="menu-item-img" src="./img/icons/delivery.png"
+                            alt="Доставка" /></a>
+                </li>
+                <li class="menu-items">
+                    <a href="contacts.html"><img class="menu-item-img" src="./img/icons/contacts.png"
+                            alt="Контакты" /></a>
+                </li>
+                <li class="menu-items">
+                    <a href="about.html" class="active"><img class="menu-item-img" src="./img/icons/about.png"
+                            alt="О нас" /></a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Обертка для основного контента и футера -->
+    <div class="main-wrapper">
+        <!-- Основное содержание -->
+        <main class="main catalog-main">
+            <!-- Корзина -->
+            <section class="catalog-section" id="cart-section">
+                <h1 class="section-title">Корзина</h1>
+                <p class="section-subtitle">Ваши выбранные товары</p>
+
+                <!-- Контейнер для товаров в корзине -->
+                <div class="cart-content">
+                    <div class="cart-container">
+                        <!-- Пустая корзина -->
+                        <div class="empty-cart" id="empty-cart">
+                            <div class="empty-cart-icon">
+                                <i class="fas fa-shopping-cart"></i>
+                            </div>
+                            <h3>Ваша корзина пуста</h3>
+                            <p>Добавьте товары из каталога, чтобы сделать заказ</p>
+                            <a href="catalog.html" class="btn btn-primary">
+                                Перейти в каталог
+                            </a>
+                        </div>
+                        <!-- Товары в корзине -->
+                        <div class="cart-items" id="cart-items">
+                            <!-- Товары будут загружаться динамически -->
+                        </div>
+
+                        <!-- Итоговая информация -->
+                        <div class="cart-summary">
+                            <div class="summary-header">
+                                <h3>Итого</h3>
+                            </div>
+
+                            <div class="summary-details">
+                                <div class="summary-row">
+                                    <span>Товары (<span id="total-items-count">0</span>)</span>
+                                    <span id="items-price">0 руб.</span>
+                                </div>
+                                <div class="summary-row">
+                                    <span>Доставка</span>
+                                    <span>Бесплатно</span>
+                                </div>
+                                <div class="summary-divider"></div>
+                                <div class="summary-total">
+                                    <span>Общая сумма</span>
+                                    <span class="total-price" id="total-price">0 руб.</span>
+                                </div>
+                            </div>
+
+                            <button class="btn btn-primary btn-checkout" id="checkout-btn">
+                                Оформить заказ
+                            </button>
+
+                            <div class="cart-actions">
+                                <a href="catalog.html" class="btn btn-secondary">
+                                    <i class="fas fa-arrow-left"></i> Вернуться к покупкам
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- Футер -->
+        <footer class="footer" id="footer">
+            <div class="container">
+                <div class="footer-grid">
+                    <div class="footer-col">
+                        <h3>SportZone</h3>
+                        <p>
+                            Экипировка для спорта и активного отдыха.<br />Ваши победы
+                            начинаются здесь.
+                        </p>
+                        <div class="social-links">
+                            <a href="#" class="social-icon"><i class="fab fa-vk"></i></a>
+                            <a href="#" class="social-icon"><i class="fab fa-telegram"></i></a>
+                            <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                            <a href="#" class="social-icon"><i class="fab fa-youtube"></i></a>
+                        </div>
+                    </div>
+
+                    <div class="footer-col">
+                        <h3>Меню</h3>
+                        <a href="index.html#home" class="footer-link">Главная</a>
+                        <a href="catalog.html#cotalog-section" class="footer-link">Каталог</a>
+                        <a href="favourites.html#favourites-section" class="footer-link">Избранное</a>
+                        <a href="#cart-section" class="footer-link active">Корзина</a>
+                        <a href="delivery.html#delivery-section" class="footer-link">Доставка</a>
+                        <a href="contacts.html#contacts-section" class="footer-link">Контакты</a>
+                    </div>
+
+                    <div class="footer-col">
+                        <h3>Помощь</h3>
+                        <a href="delivery.html#returns" class="footer-link">Возврат товара</a>
+                        <a href="delivery.html#payment" class="footer-link">Способы оплаты</a>
+                        <a href="delivery.html#guarantee" class="footer-link">Гарантия</a>
+                        <a href="contacts.html#faq" class="footer-link">Частые вопросы</a>
+                    </div>
+
+                    <div class="footer-col">
+                        <h3>Контакты</h3>
+                        <p class="contact-info">
+                            <i class="fas fa-map-marker-alt"></i> Москва, ул. Спортивная, 10
+                        </p>
+                        <p class="contact-info">
+                            <i class="fas fa-phone"></i> +7 (495) 765-43-21
+                        </p>
+                        <p class="contact-info">
+                            <i class="fas fa-envelope"></i> support@sportzone.ru
+                        </p>
+                        <p class="contact-info">
+                            <i class="fas fa-clock"></i> Пн-Вс 9:00-21:00
+                        </p>
+                    </div>
+                </div>
+
+                <div class="footer-bottom">
+                    <p>&copy; 2023 SportZone. Все права защищены.</p>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script src="./scripts/script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,580 @@
+/* styles/main.css */
+/* Все стили для главной страницы SportZone */
+
+/* Переменные */
+:root {
+    --primary-color: #9aff72;
+    --primary-dark: #D0FFBD;
+    --secondary-color: #545454;
+    --text-dark: #ffffff;
+    --text-light: #acb3aa;
+    --background-main: linear-gradient(180.75deg, #545454 0.64%, #bababa 99.36%);
+    --background-sidebar: #2e2e2e;
+    --background-footer: #161616;
+}
+
+/* Основные стили для страницы */
+.page {
+    display: grid;
+    grid-template-columns: min(20%, 117px) 1fr;
+    min-height: 100vh;
+}
+
+/* Боковая навигация */
+.header {
+    background-color: var(--background-sidebar);
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: min(20%, 125px);
+    z-index: 1000;
+    overflow-y: auto;  
+}
+
+.menu {
+    inline-size: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.menu-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    padding: 0;
+    width: 100%;
+}
+
+.menu-list.main-menu {
+    justify-content: flex-start;
+    padding-top: 0;
+}
+
+.menu-list li {
+    padding: 12px;
+    background-color: var(--primary-color);
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    margin: 0 auto;
+}
+
+.menu-list li:hover {
+    background-color: var(--primary-dark);
+    transform: scale(1.1);
+}
+
+.menu-item-img {
+    width: 24px;
+    height: 24px;
+    object-fit: contain;
+}
+
+.menu-list a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.menu-item-img {
+    inline-size: 100%;
+}
+
+.menu-items {
+    transition: background-color 0.2s ease;
+    border-radius: 10px;
+    padding: 5px;
+}
+
+/* Логотип в боковой панели */
+.sidebar-logo {
+    text-align: center;
+    padding: 15px 10px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    margin-bottom: 20px;
+}
+
+.sidebar-logo h2 {
+    font-family: "Inter", sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+    color: var(--primary-color);
+    margin: 0;
+    margin-bottom: 4px;
+}
+
+.sidebar-logo p {
+    font-family: "Inter", sans-serif;
+    font-size: 11px;
+    color: var(--text-light);
+    margin: 0;
+}
+
+/* Основное содержимое + футер в одной колонке */
+.main-wrapper {
+    grid-column: 2;
+    grid-row: 1;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Основное содержимое */
+.main {
+    background: var(--background-main);
+    flex: 1 0 auto;
+    padding: 0;
+}
+
+.categories-section {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+/* Исправление для всех секций */
+.about-section,
+.benefits-section,
+.mission-section {
+    max-width: 100%;
+    width: calc(100% - 40px);
+    box-sizing: border-box;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+/* Исправление для внутренних контейнеров */
+.about-content,
+.benefits-grid,
+.mission-vertical {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+/* Исправление для отдельных карточек и элементов */
+.benefit-card,
+.mission-item,
+.about-feature {
+    max-width: 100%;
+    box-sizing: border-box;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+}
+
+.section-title {
+    font-family: "Inter", sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 58px;
+    letter-spacing: -0.08em;
+    color: var(--primary-color);
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    text-align: center;
+}
+
+.section-subtitle {
+    font-family: "Inter", sans-serif;
+    font-size: 24px;
+    color: var(--text-light);
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+/* О нас секция - добавлены отступы */
+.about-section {
+    background-color: rgba(46, 46, 46, 0.8);
+    border-radius: 20px;
+    padding: 40px;
+    margin-bottom: 40px;
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+}
+
+.about-section .section-title {
+    font-size: 36px;
+    margin-bottom: 30px;
+}
+
+.about-content {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.about-feature {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 25px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    transition: all 0.3s ease;
+    margin: 0 10px;
+}
+
+.about-feature:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    transform: translateX(10px);
+}
+
+.feature-icon {
+    flex-shrink: 0;
+    width: 60px;
+    height: 60px;
+    background-color: var(--primary-color);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #2e2e2e;
+    font-size: 24px;
+}
+
+.feature-text h3 {
+    font-family: "Inter", sans-serif;
+    font-weight: 600;
+    font-size: 20px;
+    color: var(--primary-dark);
+    margin-bottom: 10px;
+}
+
+.feature-text p {
+    font-family: "Inter", sans-serif;
+    color: var(--text-light);
+    font-size: 16px;
+    line-height: 1.6;
+    margin: 0; 
+}
+
+/* Преимущества - добавлены отступы */
+.benefits-section {
+    margin-bottom: 60px;
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+}
+
+.benefits-section .section-title {
+    font-size: 36px;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.benefits-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+}
+
+.benefit-card {
+    background-color: rgba(46, 46, 46, 0.8);
+    border-radius: 15px;
+    padding: 35px 30px;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+    margin: 5px;
+}
+
+.benefit-card:hover {
+    border-color: var(--primary-color);
+    transform: translateY(-5px);
+}
+
+.benefit-icon {
+    width: 70px;
+    height: 70px;
+    background-color: var(--primary-color);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #2e2e2e;
+    font-size: 28px;
+    margin-bottom: 25px;
+}
+
+.benefit-card h3 {
+    font-family: "Inter", sans-serif;
+    font-weight: 600;
+    font-size: 20px;
+    color: var(--primary-dark);
+    margin-bottom: 15px;
+    line-height: 1.3;
+}
+
+.benefit-card p {
+    font-family: "Inter", sans-serif;
+    color: var(--text-light);
+    font-size: 16px;
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* Стили для секции "Наша миссия" - вертикальные вытянутые блоки */
+.mission-section {
+    margin-bottom: 60px;
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+}
+
+.mission-section .section-title {
+    font-size: 36px;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.mission-vertical {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.mission-item {
+    background: linear-gradient(145deg, rgba(40, 40, 40, 0.9), rgba(50, 50, 50, 0.9));
+    border-radius: 15px;
+    padding: 30px 35px;
+    transition: all 0.3s ease;
+    border: 2px solid #4a4a4a;
+    position: relative;
+    overflow: hidden;
+    min-height: 150px;
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+.mission-item::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 5px;
+    height: 100%;
+    background: linear-gradient(to bottom, #9aff72, #7ae052);
+}
+
+.mission-item:hover {
+    transform: translateY(-5px);
+    border-color: #9aff72;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+    background: linear-gradient(145deg, rgba(45, 45, 45, 0.95), rgba(55, 55, 55, 0.95));
+}
+
+.mission-icon {
+    flex-shrink: 0;
+    width: 70px;
+    height: 70px;
+    background: linear-gradient(135deg, #9aff72, #7ae052);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #1a1a1a;
+    font-size: 28px;
+    transition: all 0.3s ease;
+    position: relative;
+    z-index: 1;
+}
+
+.mission-item:hover .mission-icon {
+    transform: scale(1.1);
+    box-shadow: 0 0 25px rgba(154, 255, 114, 0.4);
+}
+
+.mission-content {
+    flex: 1;
+}
+
+.mission-item h3 {
+    font-family: "Inter", sans-serif;
+    font-weight: 600;
+    font-size: 22px;
+    color: #e0e0e0;
+    margin-bottom: 10px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.mission-item p {
+    font-family: "Inter", sans-serif;
+    color: #b0b0b0;
+    font-size: 16px;
+    line-height: 1.6;
+    margin: 0;
+}
+
+.footer {
+    background-color: var(--background-footer);
+    font-family: "Inter", sans-serif;
+    color: #7f7f7f;
+    padding: 30px 40px 20px;
+    flex-shrink: 0;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+    margin-bottom: 25px;
+}
+
+.footer-col {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-col h3 {
+    font-weight: 700;
+    font-size: 18px;
+    color: var(--primary-color);
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.footer-col p {
+    color: var(--text-light);
+    margin-bottom: 12px;
+    line-height: 1.5;
+    font-size: 14px;
+}
+
+/* Стили для ссылок в футере */
+.footer-link {
+    display: block;
+    color: var(--text-light);
+    text-decoration: none;
+    margin-bottom: 8px;
+    transition: all 0.3s ease;
+    font-size: 14px;
+    padding: 3px 0;
+}
+
+.footer-link:hover {
+    color: var(--primary-color);
+    transform: translateX(5px);
+}
+
+.footer-link i {
+    margin-right: 8px;
+    color: var(--primary-color);
+    font-size: 14px;
+}
+
+/* Социальные иконки */
+.social-links {
+    display: flex;
+    gap: 12px;
+    margin-top: 15px;
+}
+
+.social-icon {
+    width: 32px;
+    height: 32px;
+    background-color: rgba(154, 255, 114, 0.1);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--primary-color);
+    font-size: 14px;
+    transition: all 0.3s ease;
+    text-decoration: none;
+}
+
+.social-icon:hover {
+    background-color: var(--primary-color);
+    color: var(--background-footer);
+    transform: translateY(-3px);
+}
+
+/* Контактная информация */
+.contact-info {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 8px;
+    font-size: 14px;
+    color: var(--text-light);
+}
+
+.contact-info i {
+    margin-right: 10px;
+    color: var(--primary-color);
+    font-size: 14px;
+    min-width: 16px;
+    margin-top: 2px;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding-top: 20px;
+    border-top: 1px solid rgba(154, 255, 114, 0.2);
+    color: #888;
+    font-size: 12px;
+}
+@media (max-width: 1135px) {
+    .about-section,
+    .benefits-section,
+    .mission-section {
+        width: calc(100% - 30px);
+        margin-left: 15px;
+        margin-right: 15px;
+        padding: 10px;
+    }
+}
+
+@media (max-width: 576px) {
+    .about-section,
+    .benefits-section,
+    .mission-section {
+        width: calc(100% - 20px);
+        margin-left: 10px;
+        margin-right: 10px;
+        padding: 20px;
+    }
+    
+    .benefit-card,
+    .mission-item,
+    .about-feature {
+        min-width: 0; /* Сбрасываем минимальную ширину */
+    }
+}
+
+/* Исправление для очень маленьких экранов */
+@media (max-width: 375px) {
+    .about-section,
+    .benefits-section,
+    .mission-section {
+        width: calc(100% - 16px);
+        margin-left: 8px;
+        margin-right: 8px;
+        padding: 16px;
+    }
+    
+    /* Уменьшаем шрифты для очень маленьких экранов */
+    .feature-text h3,
+    .benefit-card h3,
+    .mission-item h3 {
+        font-size: 16px;
+    }
+    
+    .feature-text p,
+    .benefit-card p,
+    .mission-item p {
+        font-size: 14px;
+        line-height: 1.4;
+    }
+}

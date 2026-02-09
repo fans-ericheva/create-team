@@ -1,0 +1,304 @@
+<!doctype html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Каталог товаров - SportZone</title>
+    <link rel="stylesheet" href="styles/global.css" />
+    <link rel="stylesheet" href="styles/catalog.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+</head>
+
+<body class="page">
+    <button class="burger-btn" id="burgerBtn" aria-label="Открыть меню">
+        <span></span>
+        <span></span>
+        <span></span>
+    </button>
+    <header class="header">
+        <!-- Логотип -->
+        <div class="sidebar-logo">
+            <h2>SportZone</h2>
+            <p>на спорт</p>
+        </div>
+
+        <nav class="menu" id="mainMenu">
+            <ul class="menu-list main-menu">
+                <!-- Содержимое меню без изменений -->
+                <li class="menu-items">
+                    <a href="index.html"><img class="menu-item-img" src="./img/icons/home.png" alt="Главная" /></a>
+                </li>
+                <li class="menu-items">
+                    <a href="catalog.html" class="active"><img class="menu-item-img" src="./img/icons/catalog.png"
+                            alt="Каталог" /></a>
+                </li>
+                <li class="menu-items">
+                    <a href="favourites.html"><img class="menu-item-img" src="./img/icons/heart.png"
+                            alt="Избранное" /></a>
+                </li>
+                <li class="menu-items">
+                    <a href="shopping-cart.html"><img class="menu-item-img" src="./img/icons/shopping-cart.png"
+                            alt="Корзина" /></a>
+                </li>
+                <li class="menu-items">
+                    <a href="delivery.html"><img class="menu-item-img" src="./img/icons/delivery.png"
+                            alt="Доставка" /></a>
+                </li>
+                <li class="menu-items">
+                    <a href="contacts.html"><img class="menu-item-img" src="./img/icons/contacts.png"
+                            alt="Контакты" /></a>
+                </li>
+                <li class="menu-items">
+                    <a href="about.html" class="active"><img class="menu-item-img" src="./img/icons/about.png"
+                            alt="О нас" /></a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Обертка для основного контента и футера -->
+    <div class="main-wrapper">
+        <!-- Основное содержание -->
+        <main class="main catalog-main">
+            <!-- Каталог -->
+            <section class="catalog-section" id="cotalog-section">
+                <h1 class="section-title">Каталог товаров</h1>
+
+                <!-- Фильтры -->
+                <div class="filters">
+                    <div class="filter-group">
+                        <label for="category-filter">Категория:</label>
+                        <select id="category-filter" class="filter-select">
+                            <option value="all">Все категории</option>
+                            <option value="vodn-sport">Водный спорт</option>
+                            <option value="zimni-sport">Зимний спорт</option>
+                            <option value="fitness-yoga">Фитнес и йога</option>
+                            <option value="tourism">Туризм</option>
+                        </select>
+                    </div>
+                    <div class="filter-group">
+                        <label for="price-filter">Цена:</label>
+                        <select id="price-filter" class="filter-select">
+                            <option value="all">Любая</option>
+                            <option value="0-1000">До 1000 руб.</option>
+                            <option value="1000-5000">1000-5000 руб.</option>
+                            <option value="5000-15000">5000-15000 руб.</option>
+                            <option value="15000-50000">15000-25000 руб.</option>
+                            <option value="25000-50000">25000-50000 руб.</option>
+                        </select>
+                    </div>
+                    <button id="reset-filters" class="btn btn-secondary">
+                        Сбросить фильтры
+                    </button>
+                </div>
+
+                <!-- Карточки товаров (будут заполняться через JS) -->
+                <div id="products-container" class="products-grid">
+                    <!-- Товары будут загружаться динамически через JavaScript -->
+                </div>
+
+                <div class="pagination">
+                    <button id="first-page" class="pagination-btn" title="Первая страница">
+                        <i class="fas fa-angle-double-left"></i>
+                    </button>
+                    <button id="prev-page" class="pagination-btn" title="Предыдущая страница">
+                        <i class="fas fa-chevron-left"></i>
+                    </button>
+                    <span id="page-info">Страница 1 из 1</span>
+                    <button id="next-page" class="pagination-btn" title="Следующая страница">
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
+                    <button id="last-page" class="pagination-btn" title="Последняя страница">
+                        <i class="fas fa-angle-double-right"></i>
+                    </button>
+                </div>
+            </section>
+        </main>
+
+        <!-- Футер -->
+        <footer class="footer" id="footer">
+            <div class="container">
+                <div class="footer-grid">
+                    <div class="footer-col">
+                        <h3>SportZone</h3>
+                        <p>
+                            Экипировка для спорта и активного отдыха.<br />Ваши победы
+                            начинаются здесь.
+                        </p>
+                        <div class="social-links">
+                            <a href="#" class="social-icon"><i class="fab fa-vk"></i></a>
+                            <a href="#" class="social-icon"><i class="fab fa-telegram"></i></a>
+                            <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                            <a href="#" class="social-icon"><i class="fab fa-youtube"></i></a>
+                        </div>
+                    </div>
+
+                    <div class="footer-col">
+                        <h3>Меню</h3>
+                        <a href="index.html#home" class="footer-link">Главная</a>
+                        <a href="#cotalog-section" class="footer-link active">Каталог</a>
+                        <a href="delivery.html#delivery-section" class="footer-link">Доставка</a>
+                        <a href="contacts.html#contacts-section" class="footer-link">Контакты</a>
+                        <a href="about.html#about-section" class="footer-link">О нас</a>
+                    </div>
+
+                    <div class="footer-col">
+                        <h3>Помощь</h3>
+                        <a href="delivery.html#returns" class="footer-link">Возврат товара</a>
+                        <a href="delivery.html#payment" class="footer-link">Способы оплаты</a>
+                    </div>
+
+                    <div class="footer-col">
+                        <h3>Контакты</h3>
+                        <p class="contact-info">
+                            <i class="fas fa-map-marker-alt"></i> Москва, ул. Спортивная, 10
+                        </p>
+                        <p class="contact-info">
+                            <i class="fas fa-phone"></i> +7 (495) 765-43-21
+                        </p>
+                        <p class="contact-info">
+                            <i class="fas fa-envelope"></i> support@sportzone.ru
+                        </p>
+                        <p class="contact-info">
+                            <i class="fas fa-clock"></i> Пн-Вс 9:00-21:00
+                        </p>
+                    </div>
+                </div>
+
+                <div class="footer-bottom">
+                    <p>&copy; 2023 SportZone. Все права защищены.</p>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Модальное окно карточки товара -->
+    <div id="product-modal" class="modal">
+        <div class="modal-overlay"></div>
+        <div class="modal-content">
+            <button class="modal-close">
+                <i class="fas fa-times"></i>
+            </button>
+
+            <div class="modal-product">
+                <!-- Изображение товара -->
+                <div class="modal-product-image">
+                    <img id="modal-product-img" src="" alt="" />
+                    <div class="modal-product-badges">
+                        <span class="modal-badge hit">Хит продаж</span>
+                        <span class="modal-badge new">Новинка</span>
+                    </div>
+                </div>
+
+                <!-- Информация о товаре -->
+                <div class="modal-product-info">
+                    <div class="modal-product-header">
+                        <span id="modal-product-category" class="modal-product-category"></span>
+                        <div id="modal-product-brand" class="modal-product-brand">
+                            SportZone
+                        </div>
+                        <h2 id="modal-product-title" class="modal-product-title"></h2>
+                        <div class="modal-product-rating">
+                            <span id="modal-product-stars" class="rating-stars"></span>
+                            <span id="modal-product-rating" class="rating-count"></span>
+                            <!-- <span class="rating-reviews">(<span id="modal-product-reviews">0</span> отзывов)</span> -->
+                        </div>
+                    </div>
+
+                    <!-- Цена и характеристики -->
+                    <div class="modal-product-details">
+                        <div class="modal-price-section">
+                            <div id="modal-product-price" class="modal-product-price"></div>
+                            <div class="modal-product-old-price" id="modal-product-old-price"></div>
+                        </div>
+
+                        <!-- Характеристики -->
+                        <div class="modal-product-specs">
+                            <h3>Характеристики</h3>
+                            <ul id="modal-product-specs-list">
+                                <!-- Характеристики будут заполняться через JS -->
+                            </ul>
+                        </div>
+
+                        <!-- Описание -->
+                        <div class="modal-product-description">
+                            <h3>Описание</h3>
+                            <p id="modal-product-description"></p>
+                        </div>
+
+                        <!-- Действия -->
+                        <div class="modal-product-actions">
+                            <div class="quantity-selector">
+                                <button class="quantity-btn minus">-</button>
+                                <input type="number" class="quantity-input" value="1" min="1" max="99" />
+                                <button class="quantity-btn plus">+</button>
+                            </div>
+
+                            <button id="modal-add-to-cart" class="btn btn-primary modal-cart-btn">
+                                <i class="fas fa-shopping-cart"></i> В корзину
+                            </button>
+
+                            <button id="modal-fav-btn" class="fav-btn modal-fav-btn" data-id="">
+                                <i class="far fa-heart"></i>
+                            </button>
+                        </div>
+
+                        <!-- Дополнительная информация -->
+                        <div class="modal-product-extra">
+                            <div class="delivery-info">
+                                <i class="fas fa-shipping-fast"></i>
+                                <span>Бесплатная доставка от 3000₽</span>
+                            </div>
+                            <div class="stock-info">
+                                <i class="fas fa-check-circle"></i>
+                                <span id="modal-product-stock">В наличии</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="./scripts/script.js"></script>
+    <script>
+        // Инициализация при загрузке
+        document.addEventListener("DOMContentLoaded", function () {
+            // Плавная прокрутка к якорям
+            document.querySelectorAll('.footer-link[href^="#"]').forEach((link) => {
+                link.addEventListener("click", function (e) {
+                    e.preventDefault();
+                    const targetId = this.getAttribute("href").substring(1);
+                    const targetElement = document.getElementById(targetId);
+                    if (targetElement) {
+                        window.scrollTo({
+                            top: targetElement.offsetTop - 20,
+                            behavior: "smooth",
+                        });
+                    }
+                });
+            });
+
+            // Функция для обновления счетчиков корзины и избранного
+            function updateCounters() {
+                // Здесь будет логика обновления счетчиков
+                // Пока заглушка
+                const cartCount = JSON.parse(
+                    localStorage.getItem("shoppingCart") || "[]",
+                ).length;
+                const favCount = JSON.parse(
+                    localStorage.getItem("favorite") || "[]",
+                ).length;
+
+                // Можно добавить отображение счетчиков в меню
+                // Например, в виде бейджей на иконках
+            }
+
+            updateCounters();
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,616 @@
+/* Переменные */
+:root {
+    --primary-color: #9aff72;
+    --primary-dark: #D0FFBD;
+    --secondary-color: #545454;
+    --text-dark: #ffffff;
+    --text-light: #acb3aa;
+    --background-main: linear-gradient(180.75deg, #545454 0.64%, #bababa 99.36%);
+    --background-sidebar: #2e2e2e;
+    --background-footer: #161616;
+}
+
+/* Основные стили для страницы */
+.page {
+    display: grid;
+    grid-template-columns: min(20%, 117px) 1fr;
+    min-height: 100vh;
+}
+
+/* Боковая навигация */
+.header {
+    background-color: var(--background-sidebar);
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: min(20%, 125px);
+    z-index: 1000;
+    overflow-y: auto;  
+}
+
+.menu {
+    inline-size: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.menu-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    padding: 0;
+    width: 100%;
+}
+
+.menu-list.main-menu {
+    justify-content: flex-start;
+    padding-top: 0;
+}
+
+.menu-list li {
+    padding: 12px;
+    background-color: var(--primary-color);
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    margin: 0 auto;
+}
+
+.menu-list li:hover {
+    background-color: var(--primary-dark);
+    transform: scale(1.1);
+}
+
+.menu-item-img {
+    width: 24px;
+    height: 24px;
+    object-fit: contain;
+}
+
+.menu-list a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.menu-item-img {
+    inline-size: 100%;
+}
+
+.menu-items {
+    transition: background-color 0.2s ease;
+    border-radius: 10px;
+    padding: 5px;
+}
+
+/* Логотип в боковой панели */
+.sidebar-logo {
+    text-align: center;
+    padding: 15px 10px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    margin-bottom: 20px;
+}
+
+.sidebar-logo h2 {
+    font-family: "Inter", sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+    color: var(--primary-color);
+    margin: 0;
+    margin-bottom: 4px;
+}
+
+.sidebar-logo p {
+    font-family: "Inter", sans-serif;
+    font-size: 11px;
+    color: var(--text-light);
+    margin: 0;
+}
+
+/* Основное содержимое + футер в одной колонке */
+.main-wrapper {
+    grid-column: 2;
+    grid-row: 1;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Основное содержимое */
+.main {
+    background: var(--background-main);
+    flex: 1 0 auto;
+    padding: 0;
+}
+
+.section-title {
+    font-family: "Inter", sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 58px;
+    letter-spacing: -0.08em;
+    color: var(--primary-color);
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    text-align: center;
+}
+
+.section-subtitle {
+    font-family: "Inter", sans-serif;
+    font-size: 24px;
+    color: var(--text-light);
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.delivery-section,
+.returns-section,
+.payment-section {
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+/* Дополнительный отступ снизу для блока доставки */
+.delivery-section {
+    margin-bottom: 40px;
+}
+
+/* О нас секция - добавлены отступы */
+.about-section {
+    background-color: rgba(46, 46, 46, 0.8);
+    border-radius: 20px;
+    padding: 40px;
+    margin-bottom: 40px;
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+}
+
+.about-section .section-title {
+    font-size: 36px;
+    margin-bottom: 30px;
+}
+
+.about-content {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.about-feature {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 25px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    transition: all 0.3s ease;
+    margin: 0 10px;
+}
+
+.about-feature:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    transform: translateX(10px);
+}
+
+.feature-icon {
+    flex-shrink: 0;
+    width: 60px;
+    height: 60px;
+    background-color: var(--primary-color);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #2e2e2e;
+    font-size: 24px;
+}
+
+.feature-text h3 {
+    font-family: "Inter", sans-serif;
+    font-weight: 600;
+    font-size: 20px;
+    color: var(--primary-dark);
+    margin-bottom: 10px;
+}
+
+.feature-text p {
+    font-family: "Inter", sans-serif;
+    color: var(--text-light);
+    font-size: 16px;
+    line-height: 1.6;
+    margin: 0; 
+}
+
+/* Основной контейнер каталога */
+.catalog-main {
+    background: linear-gradient(180.75deg, #545454 0.64%, #bababa 99.36%);
+    padding: 40px 20px;
+}
+
+.catalog-section {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Заголовок каталога */
+.catalog-section .section-title {
+    font-size: 42px;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+/* Сетка для возвратов */
+.returns-section {
+    background-color: rgba(46, 46, 46, 0.8);
+    border-radius: 20px;
+    padding: 40px;
+    margin-bottom: 40px;
+}
+
+.returns-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    margin-bottom: 40px;
+}
+
+.return-card {
+    background-color: rgba(255, 255, 255, 0.05);
+    border-radius: 15px;
+    padding: 25px;
+    text-align: center;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+}
+
+.return-card:hover {
+    border-color: var(--primary-color);
+    transform: translateY(-5px);
+}
+
+.return-icon {
+    width: 70px;
+    height: 70px;
+    background-color: var(--primary-color);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #2e2e2e;
+    font-size: 28px;
+    margin: 0 auto 20px;
+}
+
+.return-card h3 {
+    font-family: "Inter", sans-serif;
+    font-weight: 600;
+    font-size: 18px;
+    color: var(--primary-dark);
+    margin-bottom: 10px;
+}
+
+.return-card p {
+    font-family: "Inter", sans-serif;
+    color: var(--text-light);
+    font-size: 14px;
+    line-height: 1.5;
+    margin: 0;
+}
+
+/* Инструкции по возврату */
+.returns-instructions {
+    background-color: rgba(255, 255, 255, 0.05);
+    border-radius: 15px;
+    padding: 30px;
+    border-left: 4px solid var(--primary-color);
+}
+
+.returns-instructions h3 {
+    font-family: "Inter", sans-serif;
+    font-weight: 600;
+    font-size: 20px;
+    color: var(--primary-dark);
+    margin-bottom: 20px;
+}
+
+.instructions-list {
+    margin: 0;
+    padding-left: 20px;
+}
+
+.instructions-list li {
+    font-family: "Inter", sans-serif;
+    color: var(--text-light);
+    margin-bottom: 12px;
+    line-height: 1.6;
+    font-size: 16px;
+}
+
+.instructions-list li:last-child {
+    margin-bottom: 0;
+}
+
+/* Сетка для оплаты */
+.payment-section {
+    background-color: rgba(46, 46, 46, 0.8);
+    border-radius: 20px;
+    padding: 40px;
+    margin-bottom: 40px;
+}
+
+.payment-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+.payment-card {
+    background-color: rgba(255, 255, 255, 0.05);
+    border-radius: 15px;
+    padding: 25px;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+}
+
+.payment-card:hover {
+    border-color: var(--primary-color);
+    transform: translateY(-5px);
+}
+
+.payment-icon {
+    width: 70px;
+    height: 70px;
+    background-color: var(--primary-color);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #2e2e2e;
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.payment-card h3 {
+    font-family: "Inter", sans-serif;
+    font-weight: 600;
+    font-size: 18px;
+    color: var(--primary-dark);
+    margin-bottom: 10px;
+}
+
+.payment-card p {
+    font-family: "Inter", sans-serif;
+    color: var(--text-light);
+    font-size: 14px;
+    line-height: 1.5;
+    margin-bottom: 15px;
+}
+
+.payment-details {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.payment-details li {
+    font-family: "Inter", sans-serif;
+    color: var(--text-light);
+    font-size: 13px;
+    margin-bottom: 5px;
+    padding-left: 15px;
+    position: relative;
+}
+
+.payment-details li:before {
+    content: "•";
+    color: var(--primary-color);
+    position: absolute;
+    left: 0;
+}
+
+
+.footer {
+    background-color: var(--background-footer);
+    font-family: "Inter", sans-serif;
+    color: #7f7f7f;
+    padding: 30px 40px 20px;
+    flex-shrink: 0;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+    margin-bottom: 25px;
+}
+
+.footer-col {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-col h3 {
+    font-weight: 700;
+    font-size: 18px;
+    color: var(--primary-color);
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.footer-col p {
+    color: var(--text-light);
+    margin-bottom: 12px;
+    line-height: 1.5;
+    font-size: 14px;
+}
+
+/* Стили для ссылок в футере */
+.footer-link {
+    display: block;
+    color: var(--text-light);
+    text-decoration: none;
+    margin-bottom: 8px;
+    transition: all 0.3s ease;
+    font-size: 14px;
+    padding: 3px 0;
+}
+
+.footer-link:hover {
+    color: var(--primary-color);
+    transform: translateX(5px);
+}
+
+.footer-link i {
+    margin-right: 8px;
+    color: var(--primary-color);
+    font-size: 14px;
+}
+
+/* Социальные иконки */
+.social-links {
+    display: flex;
+    gap: 12px;
+    margin-top: 15px;
+}
+
+.social-icon {
+    width: 32px;
+    height: 32px;
+    background-color: rgba(154, 255, 114, 0.1);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--primary-color);
+    font-size: 14px;
+    transition: all 0.3s ease;
+    text-decoration: none;
+}
+
+.social-icon:hover {
+    background-color: var(--primary-color);
+    color: var(--background-footer);
+    transform: translateY(-3px);
+}
+
+/* Контактная информация */
+.contact-info {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 8px;
+    font-size: 14px;
+    color: var(--text-light);
+}
+
+.contact-info i {
+    margin-right: 10px;
+    color: var(--primary-color);
+    font-size: 14px;
+    min-width: 16px;
+    margin-top: 2px;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding-top: 20px;
+    border-top: 1px solid rgba(154, 255, 114, 0.2);
+    color: #888;
+    font-size: 12px;
+}
+
+/* Добавьте в catalog.css */
+.notification {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    padding: 15px 20px;
+    border-radius: 10px;
+    background-color: #2e2e2e;
+    color: white;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    z-index: 10000;
+    transform: translateX(120%);
+    transition: transform 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    border-left: 4px solid;
+}
+
+.notification.show {
+    transform: translateX(0);
+}
+
+.notification-success {
+    border-left-color: #9aff72;
+}
+
+.notification-success i {
+    color: #9aff72;
+}
+
+.notification-info {
+    border-left-color: #1e90ff;
+}
+
+.notification-info i {
+    color: #1e90ff;
+}
+
+.no-products {
+    grid-column: 1 / -1;
+    text-align: center;
+    padding: 60px 20px;
+    background-color: rgba(46, 46, 46, 0.8);
+    border-radius: 15px;
+    border: 2px dashed rgba(154, 255, 114, 0.3);
+}
+
+.no-products i {
+    font-size: 4rem;
+    color: #9aff72;
+    margin-bottom: 20px;
+}
+
+.no-products h3 {
+    font-family: "Inter", sans-serif;
+    color: #ffffff;
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.no-products p {
+    font-family: "Inter", sans-serif;
+    color: #acb3aa;
+    font-size: 1rem;
+}
+
+@media (max-width: 768px) {
+    .delivery-section,
+    .returns-section,
+    .payment-section {
+        margin-left: 15px;
+        margin-right: 15px;
+    }
+}
+
+@media (max-width: 576px) {
+    .delivery-section,
+    .returns-section,
+    .payment-section {
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+}
